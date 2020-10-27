@@ -21,7 +21,7 @@ function getLine (param) {
 const toGo = async () => {
   let str1 = []
   let str2 = {}
-  await getLine('First String: ')
+  getLine('First String: ')
     .then(line => {
       str1 = [...new Set([...line])]
       return getLine('Second String: ')
