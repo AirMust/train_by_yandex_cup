@@ -46,5 +46,3 @@ const toGo = async () => {
 }
 
 toGo()
-
-module.exports = toGo
