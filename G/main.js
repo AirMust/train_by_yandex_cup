@@ -54,11 +54,11 @@ const tree = [
 const getNodeBy = tree => {
   const getNodeByAttr = (node, nameAttr, valueAttr) => {
     if (node[nameAttr] === valueAttr) return node
-    let value = node.children.find(nodeTemp => {
-      return getNodeByAttr(nodeTemp, nameAttr, valueAttr)
-    })
-    if (value) return value
-    return null
+    return (
+      node.children.find(nodeTemp => {
+        return getNodeByAttr(nodeTemp, nameAttr, valueAttr)
+      }) || null
+    )
   }
   return (nameAttr, valueAttr) => {
     return (
@@ -74,6 +74,7 @@ const getNodeBy = tree => {
 const utilsTree = tree => {
   return { getNodeBy: getNodeBy(tree) }
 }
+
 const main = utilsTree(tree)
 
 console.log(main.getNodeBy('value', 3))
