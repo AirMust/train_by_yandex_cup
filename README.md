@@ -8,3 +8,4 @@
 + E. Изучение bind, call, apply, proxy
 + F. 376. Wiggle Subsequence
 + G. TreeNodeUtils (getNodeBy(nameAttr, valueAttr), ...getParent(node, depthUp))
++ H. Week 5 (coursera js yandex & mipt)
